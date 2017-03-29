@@ -12,7 +12,13 @@ Ext.define('Tutk.view.main.Left', {
             title: 'west',
             width: 200,
             layout: 'border',
-            html: 'this is west panel'
+            items:[
+              {
+                xtype: 'button',
+                text: '商品列表',
+                action: 'goodsListAction'
+              }
+            ]
         });
         me.callParent(arguments);
     }

@@ -9,20 +9,41 @@ Ext.define('Tutk.controller.MainController', {
   extend: 'Ext.app.Controller',
   store : ['MainStore'], //声明该控制层要用到的store
   models: ['MainModel'],//声明该控制层要用到的model
-  views: ['main.MainView'],//声明该控制层要用到的view
+  views: ['main.MainView','login.LoginView','main.Left','goods.GoodsListView'],//声明该控制层要用到的view
   refs: [//相当于一个映射,这样就可以在控制层方便的通过geter取得相应的对象了
     {
         ref: 'mainview',
         selector: 'mainview'
+    },
+    {
+      ref: 'left',
+      selector: 'left'
+    },
+    {
+        ref: 'goodslistview',
+        selector: 'goodslistview'
     }
 ],
 init: function() {
      this.control({//这里的this相当于这个控制层
+       'viewport > mainview': {
+           afterrender: function(gp){//侦听goodslistview渲染
 
+           }
+       },
+       'goodslistview':{
+
+       },
+       'left button[action=goodsListAction]': {
+         //侦听goodswinview中action=ok的按钮单击事件
+           click: function(){
+             Ext.create({
+                 xtype: 'goodslistview'
+             });
+           }
+       }
      });
- },
- showWin : function(){
-   Ext.create('Tutk.view.main.MainView').show();
+
  }
 
 });

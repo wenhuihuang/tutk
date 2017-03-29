@@ -23,7 +23,7 @@ Ext.define('Tutk.view.Viewport', {
             //将上，下，左，右四个面板作为独立的view进行实例化，然后作为item给Viewport
              items: [
                 Ext.create('Tutk.view.main.Top'),
-                Ext.create('Tutk.view.main.Bottom'),
+              //  Ext.create('Tutk.view.main.Bottom'),
                 Ext.create('Tutk.view.main.Left'),
                 Ext.create('Tutk.view.main.Content')
             ]

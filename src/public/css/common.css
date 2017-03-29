@@ -11,6 +11,9 @@ html,body{
     background: url("../images/login-bg.jpg") no-repeat center;
     background-size: cover;
 }
+.login-form-content{
+	
+}
 .login-form-title{
 	display: block;
 	width: 100%;
@@ -29,7 +32,7 @@ html,body{
 
 /*登录页面*/
 .login-form-re{
-	padding-left: 60px;
+	padding-left: 75px;
 }
 .login-form-forgot{
 	padding-right: 100px;
