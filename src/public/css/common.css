@@ -4,3 +4,7 @@ html,body{
   overflow: hidden;
   font-family: '微软雅黑';
 }
+.public-wrapper{
+  width:1024px;
+  margin: 0 auto;
+}

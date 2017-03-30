@@ -1,30 +1,3 @@
-/*登录图标引入*/
-@font-face {
-  font-family: 'iconfont';  /* project id 245365 */
-  src: url('//at.alicdn.com/t/font_w5ceguu0xctk2o6r.eot');
-  src: url('//at.alicdn.com/t/font_w5ceguu0xctk2o6r.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_w5ceguu0xctk2o6r.woff') format('woff'),
-  url('//at.alicdn.com/t/font_w5ceguu0xctk2o6r.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_w5ceguu0xctk2o6r.svg#iconfont') format('svg');
-}
-
-
-@font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1490866238517'); /* IE9*/
-  src: url('iconfont.eot?t=1490866238517#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1490866238517') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1490866238517') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1490866238517#iconfont') format('svg'); /* iOS 4.1- */
-}
-
-.iconfont {
-  font-family:"iconfont" !important;
-  font-size:16px;
-  font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .password-field-trigger::before,
 .username-field-trigger::before,
 .submitCode-field-trigger::before {
@@ -50,11 +23,12 @@
 .login-wrap{
   margin:0 auto;
 }
-.login-header-title h2{
-  padding-left: 20%;
-}
+/*.login-header-title h2{
+  padding-left:;
+}*/
 .login-header-btn{
   display:block;
+  float:right;
   width: 120px;
   height: 30px;
   margin-top: 15px;
@@ -63,10 +37,21 @@
 background: url();
 background-size: cover;
 },*/
+/*.login-main-wrap{
+  position: relative;
+}*/
 .login-form-box{
- margin-top: 90px;
- padding-left: 25px;
- padding-right: 25px;
+  position: absolute;
+  top:50%;
+  margin-top:-190px;
+  right:0px;
+}
+.login-form-box-wrapper{
+  position: relative;
+  height: 100%;
+}
+.login-form-box-wrapper .x-autocontainer-outerCt{
+  height: 100%;
 }
 .login-form-title{
   text-align: center;
@@ -82,6 +67,7 @@ background-size: cover;
   text-decoration: none;
   color: #ccc;
 }
+
 .login-contact-box{
   padding-top: 15px;
 }
@@ -104,4 +90,9 @@ background-size: cover;
 .login-form-CopyRight{
   text-align: center;
   padding-top: 10px;
+}
+.login-footer{
+  bottom:0;
+  width:100%;
+  position: fixed;
 }

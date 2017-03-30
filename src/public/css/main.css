@@ -4,6 +4,7 @@ html,body{
     overflow: hidden;
     font-size: 14px;
 }
+
 /*共同部分*/
 .login-wrap,.login-wrap-re,.login-wrap-register{
     width: 100%;
@@ -65,7 +66,7 @@ html,body{
 
 }
 .login-form-getCode{
-	
+
 	background: #6d798c;
 }
 
