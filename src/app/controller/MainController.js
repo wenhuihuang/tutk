@@ -9,7 +9,7 @@ Ext.define('Tutk.controller.MainController', {
   extend: 'Ext.app.Controller',
   store : ['MainStore'], //声明该控制层要用到的store
   models: ['MainModel'],//声明该控制层要用到的model
-  views: ['main.MainView','login.LoginView','main.Left','goods.GoodsListView'],//声明该控制层要用到的view
+  views: ['main.MainView','login.LoginView','main.Left','main.Content','goods.GoodsListView'],//声明该控制层要用到的view
   refs: [//相当于一个映射,这样就可以在控制层方便的通过geter取得相应的对象了
     {
         ref: 'mainview',
@@ -18,6 +18,10 @@ Ext.define('Tutk.controller.MainController', {
     {
       ref: 'left',
       selector: 'left'
+    },
+    {
+      ref: 'content',
+      selector: 'content'
     },
     {
         ref: 'goodslistview',
@@ -37,9 +41,12 @@ init: function() {
        'left button[action=goodsListAction]': {
          //侦听goodswinview中action=ok的按钮单击事件
            click: function(){
-             Ext.create({
-                 xtype: 'goodslistview'
-             });
+            var  goodslistview =  Ext.create({
+                   xtype: 'goodslistview'
+               })
+             this.getContent().add(goodslistview)
+
+
            }
        }
      });
