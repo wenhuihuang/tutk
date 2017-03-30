@@ -22,7 +22,7 @@ Ext.define('Tutk.controller.LoginController', {
 
        this.control({//这里的this相当于这个控制层
            'loginview button[action=loginAction]': {
-             //侦听goodswinview中action=ok的按钮单击事件
+             //侦听loginview中action=ok的按钮单击事件
                click: function(){
                  this.loginAction();
                }
@@ -36,18 +36,19 @@ Ext.define('Tutk.controller.LoginController', {
      var password = md5(Ext.getCmp("password").getValue());
      console.log(md5(Ext.getCmp("password").getValue()))
      Ext.Ajax.request( {
-          // url : 'http://tutk.dvr163.com/apis/user?method=login',
-          url : 'http://192.168.0.102:3000/api/user',
-           method : 'POST',
+          url : 'http://tutk.dvr163.com/apis/user?method=login',
+          method : 'post',
+          cors: true,
+           useDefaultXhrHeader:false,
            params : {
                  username : username,
                  password : password
              },
            success : function(response, options) {
 
-             var o = Ext.util.JSON.decode(response.responseText);
-             console.log(o)
-            if( response.status == 200){ //&& o里面的信息
+            //  var o = Ext.util.JSON.decode(response.responseText);
+            //  console.log(o)
+            if( response.status == 200){
 
               Ext.MessageBox.alert('登录成功',  response.status);
               Ext.util.Cookies.set("username", username);
@@ -66,7 +67,7 @@ Ext.define('Tutk.controller.LoginController', {
            },
            failure : function(response, options) {
 
-             Ext.MessageBox.alert('失败', '请求超时或网络故障,错误编号：' + response.responseText);
+             Ext.MessageBox.alert('失败', '请求超时或网络故障');
            }
           });
    }
