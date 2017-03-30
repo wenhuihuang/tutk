@@ -41,10 +41,10 @@ init: function() {
        'left button[action=goodsListAction]': {
          //侦听goodswinview中action=ok的按钮单击事件
            click: function(){
-
-             this.getContent().add(   Ext.create({
-                    xtype: 'goodslistview'
-                }))
+            var  goodslistview =  Ext.create({
+                   xtype: 'goodslistview'
+               })
+             this.getContent().add(goodslistview)
 
 
            }
