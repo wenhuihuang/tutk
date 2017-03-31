@@ -151,11 +151,13 @@ Ext.define('Tutk.view.login.Content', {
                               xtype: 'box',
                               cls:'register-accounter-cls',
                               html: '<a href="#" class="register-accounter">免费注册</a>',
-                              flex:1
+                              flex:1,
+                              action:'registerAction',
                             },{
                               xtype: 'box',
                               cls:'login-form-forgot',
                               html: '<a href="#" class="forgot-password">忘记密码？</a>',
+                              action:'forgotAction',
                             }]
                   },
                 //登录框第七个子组件结束
