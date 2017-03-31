@@ -5,27 +5,27 @@ Ext.define('Tutk.view.register.RegisterView', {
 
     items:[{
       xtype:'container',
-      cls:'public-wrapper',
       layout:'center',
       height:'100%',
       items:[{
         xtype:'form',
         width:400,
-        height:400,
-        cls:'login-form-box',
+        height:500,
+        cls:'register-form-box',
         bodyPadding: '20 20',
         defaults: {
               //defaults 这里设置form下所有组件的默认配置
               anchor: '100%',
               margin: '0 0 10 0',
+              labelWidth:60,
+              labelAlign:'right',
               allowBlank: false //因为字段必填的很多，所以默认都必须填
-
                },
                items:[{
                  xtype:'panel',
-                 height:45,
+                 height:65,
                  border:false,
-                 cls:'login-header-title',
+                 cls:'register-title',
                  html:'<h2><img src="../../../public/images/icon-logo.png"><span>注册云存账号</span></h2'
                },{
                  xtype: 'textfield',
@@ -35,7 +35,7 @@ Ext.define('Tutk.view.register.RegisterView', {
                  cls: 'username-cls',
                  enableKeyEvents: true,
                  emptyText: '请输入用户名',
-                 height:40,
+                 height:35,
                },{
                  xtype: 'textfield',
                  name: 'password',
@@ -44,7 +44,7 @@ Ext.define('Tutk.view.register.RegisterView', {
                  cls: 'password-cls',
                  inputType: 'password',
                  emptyText: '设置密码',
-                 height:40,
+                 height:35,
 
                },{
                  xtype: 'textfield',
@@ -54,35 +54,35 @@ Ext.define('Tutk.view.register.RegisterView', {
                  cls: 'password-cls',
                  inputType: 'password',
                  emptyText: '再次输入密码',
-                 height:40,
+                 height:35,
                },{
                  xtype: 'textfield',
                  name: 'companyname',
                  fieldLabel:'公司名称',
                  enableKeyEvents: true,
                  emptyText: '输入公司名称',
-                 height:40,
+                 height:35,
                },{
                  xtype: 'textfield',
                  name: 'companyaddress',
                  fieldLabel:'公司地址',
                  enableKeyEvents: true,
                  emptyText: '输入公司地址',
-                 height:40,
+                 height:35,
                },{
                  xtype: 'textfield',
                  name: 'linkman',
                  fieldLabel:'联系人',
                  enableKeyEvents: true,
                  emptyText: '输入联系人姓名',
-                 height:40,
+                 height:35,
                },{
                  xtype: 'textfield',
                  name: 'linkman',
                  fieldLabel:'联系电话',
                  enableKeyEvents: true,
                  emptyText: '输入联系人号码',
-                 height:40,
+                 height:35,
                },{
                  xtype: 'textfield',
                  vtype:'email',
@@ -90,12 +90,13 @@ Ext.define('Tutk.view.register.RegisterView', {
                  fieldLabel:'联系邮箱',
                  enableKeyEvents: true,
                  emptyText: '输入邮箱地址',
-                 height:40,
+                 height:35,
                },{
                  xtype:'button',
                  text:'确定',
-                 height:40,
-                 action:'rebackLogin'
+                 height:35,
+                //  cls:'register-btn',
+                 id:"rebackLogin-btn"
                }]
 
       }]

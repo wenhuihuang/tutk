@@ -45,18 +45,9 @@ Ext.define('Tutk.controller.LoginController', {
                click: function(){
                  this.loginAction();
                }
-           },
-           'loginview label[action=registerAction]':{
-             click:function(){
-               alert('111')
-               this.registerAction();
-             }
-           },
-           'loginview label[action=forgotAction]':{
-             click:function(){
-               this.forgotAction();
-             }
            }
+          
+
        });
    },
    loginAction : function(){
