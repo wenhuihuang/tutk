@@ -8,3 +8,18 @@ html,body{
   width:1024px;
   margin: 0 auto;
 }
+.public-button-default,.public-button-default:hover,.public-button-default:active,.public-button-default:visited,.public-button-default:focus{
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding:0;
+  margin:0;
+  background: transparent;
+  background-color: transparent;
+  border:none;
+  box-shadow: none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -ms-box-shadow:none;
+  -o-box-shadow:none;
+}

@@ -23,22 +23,36 @@ Ext.define('Tutk.controller.LoginController', {
       }
   ],
   init: function() {
+    var me = this;
     // var view = this.getSchedulerSchedulerView()
     // console.log(view)
 
        this.control({//这里的this相当于这个控制层
+          'loginview':{
+            afterrender: function(gp){//侦听goodslistview渲染
+              //
+              Ext.get('register-btn').on('click',function(){
+                me.registerAction()
+              });
+              Ext.get('forgot-btn').on('click',function(){
+                me.forgotAction()
+              })
+
+            }
+          },
            'loginview button[action=loginAction]': {
              //侦听loginview中action=ok的按钮单击事件
                click: function(){
                  this.loginAction();
                }
            },
-           'loginview box[action=registerAction]':{
+           'loginview label[action=registerAction]':{
              click:function(){
+               alert('111')
                this.registerAction();
              }
            },
-           'loginview box[action=forgotAction]':{
+           'loginview label[action=forgotAction]':{
              click:function(){
                this.forgotAction();
              }
@@ -86,7 +100,7 @@ Ext.define('Tutk.controller.LoginController', {
              Ext.MessageBox.alert('失败', '请求超时或网络故障');
            }
           });
-   }
+   },
 
 //注册部分
   registerAction:function(){
@@ -94,7 +108,7 @@ Ext.define('Tutk.controller.LoginController', {
     Ext.create({
         xtype: 'registerview'
     });
-  }
+  },
 
 //忘记密码部分
 forgotAction :function () {

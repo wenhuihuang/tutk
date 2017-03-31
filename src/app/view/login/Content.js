@@ -4,7 +4,6 @@
 Ext.define('Tutk.view.login.Content', {
     extend: 'Ext.Panel',
     alias: 'widget.content',
-
     initComponent: function () {
         var me = this;
         Ext.apply(this, {
@@ -148,16 +147,17 @@ Ext.define('Tutk.view.login.Content', {
                         align: 'stretch'
                     },
                     items: [{
-                              xtype: 'box',
-                              cls:'register-accounter-cls',
-                              html: '<a href="#" class="register-accounter">免费注册</a>',
+                              xtype: 'label',
+                              cls:'register-accounter-cls public-button-default',
+                              text: '免费注册',
                               flex:1,
-                              action:'registerAction',
+                              id:"register-btn"
+
                             },{
-                              xtype: 'box',
-                              cls:'login-form-forgot',
-                              html: '<a href="#" class="forgot-password">忘记密码？</a>',
-                              action:'forgotAction',
+                              xtype: 'label',
+                              cls:'login-form-forgot public-button-default',
+                              text: '忘记密码？',
+                              id:'forgot-btn'
                             }]
                   },
                 //登录框第七个子组件结束

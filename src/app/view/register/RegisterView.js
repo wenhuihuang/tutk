@@ -1,13 +1,6 @@
-Ext.define('Tutk.view.register.Register', {
+Ext.define('Tutk.view.register.RegisterView', {
     extend: 'Ext.container.Container',
-    xtype: 'register',
-    requires: [
-        'Tutk.view.register.RegisterController',
-        'Tutk.view.register.RegisterModel',
-        'Ext.form.Panel'
-    ],
-    controller: 'register',
-    viewModel: 'register',
+    alias : 'widget.registerview',
     plugins: 'viewport',
 
     items:[{
@@ -37,7 +30,7 @@ Ext.define('Tutk.view.register.Register', {
                },{
                  xtype: 'textfield',
                  name: 'username',
-                 fieldLabel:'用户名'
+                 fieldLabel:'用户名',
                  id:'username',
                  cls: 'username-cls',
                  enableKeyEvents: true,
@@ -55,9 +48,9 @@ Ext.define('Tutk.view.register.Register', {
 
                },{
                  xtype: 'textfield',
-                 name: 'password',
+                 name: 'rePassword',
                  fieldLabel:'确认密码',
-                 id:'password',
+                 id:'rePassword',
                  cls: 'password-cls',
                  inputType: 'password',
                  emptyText: '再次输入密码',
@@ -65,28 +58,28 @@ Ext.define('Tutk.view.register.Register', {
                },{
                  xtype: 'textfield',
                  name: 'companyname',
-                 fieldLabel:'公司名称'
+                 fieldLabel:'公司名称',
                  enableKeyEvents: true,
                  emptyText: '输入公司名称',
                  height:40,
                },{
                  xtype: 'textfield',
                  name: 'companyaddress',
-                 fieldLabel:'公司地址'
+                 fieldLabel:'公司地址',
                  enableKeyEvents: true,
                  emptyText: '输入公司地址',
                  height:40,
                },{
                  xtype: 'textfield',
                  name: 'linkman',
-                 fieldLabel:'联系人'
+                 fieldLabel:'联系人',
                  enableKeyEvents: true,
                  emptyText: '输入联系人姓名',
                  height:40,
                },{
                  xtype: 'textfield',
                  name: 'linkman',
-                 fieldLabel:'联系电话'
+                 fieldLabel:'联系电话',
                  enableKeyEvents: true,
                  emptyText: '输入联系人号码',
                  height:40,
@@ -94,7 +87,7 @@ Ext.define('Tutk.view.register.Register', {
                  xtype: 'textfield',
                  vtype:'email',
                  name: 'email',
-                 fieldLabel:'联系邮箱'
+                 fieldLabel:'联系邮箱',
                  enableKeyEvents: true,
                  emptyText: '输入邮箱地址',
                  height:40,
